@@ -1,0 +1,59 @@
+header{
+    width: 100%;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    background: #412A21;
+    color: #FFFFFF;    
+    border-left: 4px solid #FFFFFF;
+}
+.contenedorBtn{
+    width: 70%;
+    height: 100%;
+    background: #F0B02F;
+    display: flex;
+    flex-direction: row;
+}
+.contenedorSaludo{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btnHeader{
+    width: 33%;
+    height: 88%;
+    border-style: solid ;
+    border-color: #FFFFFF;
+    border-width: 5px 5px 5px 0px; /* top, right, bottom and left */
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C1712
+}
+.links{
+    color: #1C1712;    
+}
+.btnHeader:hover{
+    background: #FFFFFF;
+}
+.btnHeader:focus {
+    outline: none;
+}
+.saludo{
+    width: 75%;
+    text-align: right;
+    margin: 0px;
+    font-size: 40px;
+}
+.linkHome{
+    width: 25%;
+    height: 100%;
+    margin: 0 5% 0 5%;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
