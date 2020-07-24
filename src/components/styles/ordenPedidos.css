@@ -1,0 +1,8 @@
+.controladorContador{
+    display: flex;
+    flex-direction: row;
+}
+/* .contPrecio{
+    display: flex;
+    justify-content: flex-end;
+} */
