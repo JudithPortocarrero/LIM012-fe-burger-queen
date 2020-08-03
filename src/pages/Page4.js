@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState, Fragment } from 'react';
 import Cabecera from '../components/cabeceraMesero'
+import {obtenerPedidosMesero} from '../firebase/firestore'
+import ListaHistorial from '../components/historialPedidos/lista'
 
-class Page4 extends React.Component {
-    render(){
-        return (
-            <div>
-                <div><Cabecera/></div>
-                <div>
-                    Historial de pedido
-                </div>
-            </div>
-        )
-    }
+const Page4 =()=> {
+
+    const [dataPedidos, setdataPedidos] = useState([]);
+    
+    useEffect(() => {
+        obtenerPedidosMesero((data)=> {
+        console.log(data);
+        setdataPedidos(data);
+      });  
+       
+    }, []); 
+
+    return (
+            <Fragment>
+            <Cabecera/>              
+            <ListaHistorial pedidos={dataPedidos}/>
+          </Fragment>
+    )
+    
  }
 
 export default Page4

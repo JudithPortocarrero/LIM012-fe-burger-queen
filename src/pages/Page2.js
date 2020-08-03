@@ -143,15 +143,25 @@ class Page2 extends React.Component {
                 pedidoEntregado: false,
                 pedidoTerminado: false,
             }).then(() => {
+                document.querySelector('.nroMesa').value = '';
+                document.querySelector('.nombreCliente').value = '';
+                this.setState({
+                    nombreCli: ' ',
+                    numeroMesa: ' ',            
+                    pedido: [],
+                    precioTotal: 0
+                })
                 console.log('Subido exitosamente');
             }).catch(() => {
                 console.log('error');
             })
         }
         const cancelarPedido = () => {
+            document.querySelector('.nroMesa').value = '';
+            document.querySelector('.nombreCliente').value = '';
             this.setState({
-                nombreCli: '',
-                numeroMesa: '',            
+                nombreCli: ' ',
+                numeroMesa: ' ',            
                 pedido: [],
                 precioTotal: 0
             })
@@ -162,10 +172,10 @@ class Page2 extends React.Component {
                 <div className='contenedorCuerpo'>
                     <div className='contenedorPedido'>
                         <section className='descripcionPedido'>
-                            <div className='titulo'><p>ORDEN DE PEDIDO</p></div>
+                            <div className='titulo'>ORDEN DE PEDIDO</div>
                             <form className="formulario">
                                 N° de mesa:<input type="text" className="nroMesa" onChange={mesaChange}/><br/>
-                                Nombre del cliente:<input type="text" className="nombreCliente:" onChange={nombreChange}/>
+                                Nombre del cliente:<input type="text" className="nombreCliente" onChange={nombreChange}/>
                             </form>
                             <div>
                             <table  className='tabla'>
@@ -199,7 +209,7 @@ class Page2 extends React.Component {
                             <button className='btnMenu' onClick={tipoAlmuerzo}>ALMUERZO Y CENA</button>
                             <button className='btnMenu' onClick={tipoBebida}>BEBIDAS</button>
                         </section>
-                        <section>
+                        <section className='mostradorPedidos'>
                             <Show menu={this.state.Menu} tipoDeProducto={this.state.tipoProducto} onClick={obtenerPedido}/>
                         </section>
                     </div>

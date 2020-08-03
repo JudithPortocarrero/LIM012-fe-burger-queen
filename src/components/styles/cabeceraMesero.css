@@ -4,8 +4,9 @@ header{
     display: flex;
     flex-direction: row;
     background: #412A21;
-    color: #FFFFFF;    
-    border-left: 4px solid #FFFFFF;
+    color: #FFFFFF;   
+    margin: 0; 
+    /* border-left: 4px solid #FFFFFF; */
 }
 .contenedorBtn{
     width: 70%;
