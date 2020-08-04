@@ -1,13 +1,14 @@
 import React, { useEffect, useState, Fragment } from "react";
 import DetallePedido from "./detallePedido";
 import {productoServido} from '../../firebase/firestore'
+import './listaPedidos.css'
 
 const ListaPedidos = ({ pedidos, esCocina }) => {
     const listaPedidos = pedidos;
   return (
     <Fragment>
             {listaPedidos.map((pedido) => (
-                <section key={pedido.numero.toString()}> 
+                <section key={pedido.numero.toString()} className='tarjetaEstado'> 
                     <section>
                         <section>N° {pedido.numero}</section>
                         <section>N° de Mesa: {pedido.mesa}</section>

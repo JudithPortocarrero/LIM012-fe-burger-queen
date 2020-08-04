@@ -70,8 +70,13 @@ export const obtenerPedidosMesero = (callback) => firebase.firestore().collectio
 
   export const productoPreparado = (idPedido) => {
     obtenerPedido(idPedido).then((data) => {
+      const date = new Date();
+      const tiempo = date.getTime().toString();
       let pedido = data.data()
+      console.log('tiempo', date.getTime())
+      console.log(tiempo);
       pedido.flagterminadococina = true;
+      pedido.tiempoTermino = tiempo;
       firebase.firestore().collection("OrdenPedido").doc(idPedido).update(pedido);
    });
   }
@@ -83,5 +88,17 @@ export const obtenerPedidosMesero = (callback) => firebase.firestore().collectio
       firebase.firestore().collection("OrdenPedido").doc(idPedido).update(pedido);
    });
   }
+  export const obtenerHistorial = (callback) => firebase.firestore().collection("OrdenPedido")
+  .orderBy('fechaini', 'asc')
+  .onSnapshot((querySnapshot) => {
+    const pedidos = [];
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data())
+      if(doc.data().flagentregadomesero === true && doc.data().flagterminadococina === true){
+        pedidos.push({ id : doc.id, ...doc.data() });
+      }
+    });
+    callback(pedidos);
+  });
 
   

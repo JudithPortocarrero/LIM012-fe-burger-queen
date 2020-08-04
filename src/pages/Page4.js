@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import Cabecera from '../components/cabeceraMesero'
-import {obtenerPedidosMesero} from '../firebase/firestore'
+import {obtenerHistorial} from '../firebase/firestore'
 import ListaHistorial from '../components/historialPedidos/lista'
 
 const Page4 =()=> {
@@ -8,7 +8,7 @@ const Page4 =()=> {
     const [dataPedidos, setdataPedidos] = useState([]);
     
     useEffect(() => {
-        obtenerPedidosMesero((data)=> {
+      obtenerHistorial((data)=> {
         console.log(data);
         setdataPedidos(data);
       });  

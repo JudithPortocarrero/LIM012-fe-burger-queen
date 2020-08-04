@@ -10,7 +10,11 @@ const DetallePedido = ({detalle, esCocina, idPedido}) => {
                 <section><p>{prod.producto}</p></section>
                 <section>
                     <input type='checkbox' id={prod.id} value='' checked={prod.flagcocina}/>
-                    <input  type='checkbox' id={prod.id} value='' checked={prod.flagservido} onClick={() => actualizarEstadoMesero(idPedido,prod.id) } />
+                    <input  type='checkbox' id={prod.id} value='' checked={prod.flagservido} onClick={() =>  {
+                        if(prod.flagcocina===true){
+                            actualizarEstadoMesero(idPedido,prod.id)
+                        }
+                    } } />
                 </section>
             </div>
             ))}

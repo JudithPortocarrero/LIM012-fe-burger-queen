@@ -2,14 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import DetalleCard from "./detallesCard";
 import {productoPreparado} from '../../firebase/firestore'
 
-const ListaCard = ({ pedidos}) => {
+const ListaCard = ({ pedidos }) => {
     const listaPedidos = pedidos;
   return (
     <Fragment>
-            {listaPedidos.map((pedido) => (
+            {listaPedidos.map((pedido, key) => (
                 <section key={pedido.numero.toString()}> 
                     <section>
-                        <section>N° {pedido.numero}</section>
+                        <section>N° {key+1} MODIFICAR</section>
                         <section>N° de Mesa: {pedido.mesa}</section>
                         <DetalleCard detalle={pedido.detalle} idPedido={pedido.id}/>
                     </section>

@@ -5,9 +5,9 @@ const OrdenPedidos = ({idcontenedor, Increment, Decrement, counter, nombre, prec
     return (
         <tr>
             <td className='controladorContador'>
-                <button id={idcontenedor} className='add-button' type='button' onClick={Increment}>+</button>
-                <p>{counter}</p>
-                <button id={idcontenedor}  className='add-button' type='button' onClick={Decrement}>-</button>
+                <button id={idcontenedor} className='btnContador' type='button' onClick={Increment}>+</button>
+                <strong>&nbsp;&nbsp;{counter}&nbsp;&nbsp;</strong>
+                <button id={idcontenedor}  className='btnContador' type='button' onClick={Decrement}>-</button>
             </td>
             <td>{nombre}</td>
             <td className='contPrecio'>{precio}</td>

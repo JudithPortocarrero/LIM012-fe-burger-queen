@@ -2,6 +2,7 @@ import React, { useEffect, useState, Fragment } from 'react';
 import Cabecera from '../components/cabeceraMesero'
 import {obtenerPedidosMesero} from '../firebase/firestore'
 import ListaPedidos from '../components/listadoPedidos/listaPedidos'
+import './Page3.css'
 
 const Page3 =()=> {
 
@@ -16,10 +17,10 @@ const Page3 =()=> {
     }, []); 
 
     return (
-            <Fragment>
-            <Cabecera/>              
-            <ListaPedidos pedidos={dataPedidos}  esCocina = 'false'/>
-          </Fragment>
+      <div className='contenedorHistorialPedidos'>
+        <Cabecera/>
+        <div className='contenedorListaHistorial'><ListaPedidos pedidos={dataPedidos}  esCocina = 'false'/></div>              
+      </div>
     )
     
  }

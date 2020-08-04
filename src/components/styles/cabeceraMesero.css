@@ -28,7 +28,7 @@ header{
     border-style: solid ;
     border-color: #FFFFFF;
     border-width: 5px 5px 5px 0px; /* top, right, bottom and left */
-    font-size: 27px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;

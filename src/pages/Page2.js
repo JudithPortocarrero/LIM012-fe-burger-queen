@@ -172,33 +172,33 @@ class Page2 extends React.Component {
                 <div className='contenedorCuerpo'>
                     <div className='contenedorPedido'>
                         <section className='descripcionPedido'>
-                            <div className='titulo'>ORDEN DE PEDIDO</div>
+                            <div className='titulo'>ORDEN  DE  PEDIDO</div>
                             <form className="formulario">
-                                N° de mesa:<input type="text" className="nroMesa" onChange={mesaChange}/><br/>
-                                Nombre del cliente:<input type="text" className="nombreCliente" onChange={nombreChange}/>
+                                N° de mesa:<input type="text" className="nroMesa ingresoDatos" onChange={mesaChange}/><br/><br/>
+                                Nombre del cliente:<input type="text" className="nombreCliente ingresoDatos" onChange={nombreChange}/>
                             </form>
-                            <div>
-                            <table  className='tabla'>
-                                <tbody>
-                                    {
-                                        this.state.pedido.map((item, key) => {
-                                                // console.log(key)
-                                                return (
-                                                    <OrdenPedidos key={key}
-                                                        idcontenedor={item.id}
-                                                        Increment={onIncrementClick}
-                                                        Decrement={onDecrementClick}
-                                                        counter={item.contador}
-                                                        nombre={item.producto}
-                                                        precio={item.precio}
-                                                    />                        
-                                                );   
-                                        })
-                                    }
-                                </tbody>
-                            </table>
+                            <div className='contenedorTabla'>
+                                <table className='tabla'>
+                                    <tbody>
+                                        {
+                                            this.state.pedido.map((item, key) => {
+                                                    // console.log(key)
+                                                    return (
+                                                        <OrdenPedidos key={key}
+                                                            idcontenedor={item.id}
+                                                            Increment={onIncrementClick}
+                                                            Decrement={onDecrementClick}
+                                                            counter={item.contador}
+                                                            nombre={item.producto}
+                                                            precio={item.precio}
+                                                        />                        
+                                                    );   
+                                            })
+                                        }
+                                    </tbody>
+                                </table>
                             </div>
-                                <p><strong>Total: {this.state.precioTotal}</strong></p>
+                            <div className='total'>Total: {this.state.precioTotal}</div>
                         </section>
                         <button className='btnEnviar' onClick={enviarPedido}>ENVIAR</button>
                         <button className='btnCancelar' onClick={cancelarPedido}>CANCELAR</button>
