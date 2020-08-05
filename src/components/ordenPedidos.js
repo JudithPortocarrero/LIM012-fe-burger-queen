@@ -14,4 +14,5 @@ const OrdenPedidos = ({idcontenedor, Increment, Decrement, counter, nombre, prec
         </tr>
     );
 }
+
 export default OrdenPedidos;

@@ -7,7 +7,9 @@ const Producto = ({ ImageProducto, nombreProducto, precioProducto, idProducto, c
             <div className='contenedorComida'>
                 <img className='imagenProducto' src={ImageProducto} alt={nombreProducto}/>
             </div>
-            <div className='contenedorNombre'><p className='nombre'>{nombreProducto}</p></div>
+            <div className='contenedorNombre'>
+                <p className='nombre'>{nombreProducto}</p>
+            </div>
             <button className='contenedorPrecio' id={idProducto} onClick={click}>
                 S/ {precioProducto}
             </button>
@@ -15,4 +17,4 @@ const Producto = ({ ImageProducto, nombreProducto, precioProducto, idProducto, c
     )
 }
 
-export default Producto
+export default Producto;

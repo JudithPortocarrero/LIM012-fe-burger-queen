@@ -12,6 +12,6 @@ const Cabecera = () => {
             </div>
         </header>
     )
- }
+}
 
 export default Cabecera;

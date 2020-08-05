@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-
+import db from '../conexionFirebase';
 
 export const crearPedido = (json) => {
   firebase.firestore().collection("OrdenPedido").add(json);
@@ -100,5 +100,16 @@ export const obtenerPedidosMesero = (callback) => firebase.firestore().collectio
     });
     callback(pedidos);
   });
+
+export const obtenerMenu = (callback)  => db.collection('menu').get()
+.then((snapShots)=>{
+    let Menu = [];
+    Menu = snapShots.docs.map(doc => {
+      return {id: doc.id, data: doc.data()}
+  })
+  callback(Menu);
+})
+
+
 
   

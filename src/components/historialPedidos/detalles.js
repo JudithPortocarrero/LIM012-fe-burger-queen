@@ -5,13 +5,14 @@ const DetalleHistorial = ({detalle}) => {
     return (
         <Fragment>
             {dataDetalles.map(prod => (
-            <div key={prod.id.toString()}>
-                <p>cantidad</p>
-                <p>{prod.producto}</p>
-                <p>S/{prod.precio}</p>
-            </div>
+                <div key={prod.id.toString()}>
+                    <p>cantidad</p>
+                    <p>{prod.producto}</p>
+                    <p>S/{prod.precio}</p>
+                </div>
             ))}
         </Fragment>
     );
 };
+
 export default DetalleHistorial;

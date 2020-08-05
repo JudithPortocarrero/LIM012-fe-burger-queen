@@ -4,24 +4,21 @@ import {obtenerHistorial} from '../firebase/firestore'
 import ListaHistorial from '../components/historialPedidos/lista'
 
 const Page4 =()=> {
-
     const [dataPedidos, setdataPedidos] = useState([]);
     
     useEffect(() => {
       obtenerHistorial((data)=> {
         console.log(data);
         setdataPedidos(data);
-      });  
-       
+      });   
     }, []); 
 
     return (
-            <Fragment>
+        <Fragment>
             <Cabecera/>              
             <ListaHistorial pedidos={dataPedidos}/>
-          </Fragment>
-    )
-    
- }
+        </Fragment>
+    )  
+}
 
-export default Page4
+export default Page4;
