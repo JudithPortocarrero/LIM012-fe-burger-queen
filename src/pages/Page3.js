@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState, Fragment } from 'react';
 import Cabecera from '../components/cabeceraMesero'
+import {obtenerPedidosMesero} from '../firebase/firestore'
+import ListaPedidos from '../components/listadoPedidos/listaPedidos'
+import './Page3.css'
 
-class Page3 extends React.Component {
-    render(){
-        return (
-            <div>
-                <div><Cabecera/></div>
-                <div>
-                    Estado del pedido
-                </div>
-            </div>
-        )
-    }
+const Page3 = () => {
+    const [dataPedidos, setdataPedidos] = useState([]);
+    
+    useEffect(() => {
+        obtenerPedidosMesero((data)=> {
+            console.log(data);
+            setdataPedidos(data);
+      });   
+    }, []); 
+
+    return (
+        <div className='contenedorHistorialPedidos'>
+            <Cabecera/>
+            <div className='contenedorListaHistorial'>
+                <ListaPedidos pedidos={dataPedidos}/>
+            </div>              
+        </div>
+    ) 
  }
 
-export default Page3
+export default Page3;

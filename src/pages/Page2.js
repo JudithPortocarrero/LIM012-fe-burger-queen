@@ -214,5 +214,4 @@ const Page2 = () => {
         </React.Fragment>
     )
 }
-
 export default Page2;
