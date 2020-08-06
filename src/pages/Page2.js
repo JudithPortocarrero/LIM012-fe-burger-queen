@@ -132,29 +132,31 @@ const Page2 = () => {
             <div className='contenedorCuerpo'>
                 <div className='contenedorPedido'>
                     <section className='descripcionPedido'>
-                        <div className='titulo'>ORDEN  DE  PEDIDO</div>
-                        <form className="formulario">
-                            N° de mesa:<input type="text" className="nroMesa ingresoDatos" onChange={mesaChange}/><br/><br/>
-                            Nombre del cliente:<input type="text" className="nombreCliente ingresoDatos" onChange={nombreChange}/>
-                        </form>
-                        <div className='contenedorTabla'>
-                            <table className='tabla'>
-                                <tbody>
-                                    {pedido.map((item, key) => {
-                                        return (
-                                            <OrdenPedidos key={key}
-                                                idcontenedor={item.id}
-                                                Increment={onIncrementClick}
-                                                Decrement={onDecrementClick}
-                                                counter={item.contador}
-                                                nombre={item.producto}
-                                                precio={item.precio}
-                                            />                        
-                                        );   
-                                    })}
-                                </tbody>
-                            </table>
-                        </div>
+                        <div>
+                            <div className='titulo'>ORDEN  DE  PEDIDO</div>
+                                <form className="formulario">
+                                    N° de mesa:<input type="text" className="nroMesa ingresoDatos" onChange={mesaChange}/><br/><br/>
+                                    Nombre del cliente:<input type="text" className="nombreCliente ingresoDatos" onChange={nombreChange}/>
+                                </form>
+                                <div className='contenedorTabla'>
+                                    <table className='tabla'>
+                                        <tbody>
+                                            {pedido.map((item, key) => {
+                                                return (
+                                                    <OrdenPedidos key={key}
+                                                        idcontenedor={item.id}
+                                                        Increment={onIncrementClick}
+                                                        Decrement={onDecrementClick}
+                                                        counter={item.contador}
+                                                        nombre={item.producto}
+                                                        precio={item.precio}
+                                                    />                        
+                                                );   
+                                            })}
+                                        </tbody>
+                                    </table>
+                                </div>   
+                        </div>    
                         <div className='total'>Total: { precioTotal}</div>
                     </section>
                     <button className='btnEnviar' onClick={enviarPedido}>ENVIAR</button>
