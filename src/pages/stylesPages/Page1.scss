@@ -1,3 +1,5 @@
+@import '../../components/estilosCompartidos';
+
 $margen: 0;
 $tipo-letra: Arial, Helvetica, sans-serif;
 $tamaño: 100%;
@@ -20,8 +22,7 @@ body{
     @include centrado-contenido;
 }
 .logoPage1{
-    width: 85%;
-    height: 45%;
+    @include definirTamaños(85%, 45%);
 }
 .contenedorBotones{
     width: 60%;
@@ -30,7 +31,6 @@ body{
     background-size: contain;
     flex-direction: column;
 }
-
 @media screen and (max-width:1024px) {
     .contenedor{
         height: 768px;

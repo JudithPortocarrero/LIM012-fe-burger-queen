@@ -1,66 +1,52 @@
+@import '../../components/estilosCompartidos';
+
 .contenedorHistorialMesero{
-    width: 100%;
-    height: auto;
+    @include definirTamaños(100%,auto);
     background: url('../../images/fondoladrillo.jpg');
 }
 .contenedorPedidosMesero{
-    width: 100%;
-    height: 690px;
+    @include definirTamaños(100%,690px);
     overflow: scroll;
-    display: flex;
+    @include displayJustifyContent(space-around);
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 .historicoListaCard{
+    @include definirTamaños(43%,300px);
     margin: 40px 0 40px 0;
-    width: 43%;
-    height: 300px;
     background: #ffffff;
 }
 
 .cardEstadoHistorico{
-    width: 95%;
-    height: 100%;
+    @include definirTamaños(95%,100%);
     margin-left: 5%;
     font-size: 23px;
 }
 .contenedorDetallesHistorial{
-    display: flex;
-    flex-direction: column;
+    @include displayFlex(column);
     padding: 15px 0 20px 0;
 }
 .detallePedidoHistorico{
     height: 140px;
     overflow: scroll;
 }
-
 .precioTotal{
     font-weight: bolder;
     padding-left: 55%;
 }
-
-
 table {
     border-collapse: collapse;
     border: 1px solid #ffffff;
 }
-
 .td1 {
     width: 10%;
-    /* border: 1px solid black; */
 }
-
 .td2 {
     width: 50%;
-    /* border: 1px solid black; */
 }
-
 .td3 {
     width: 15%;
     justify-content: right;
-    /* border: 1px solid black; */
 }
-
 @media screen and (min-width:1025px) {
     .contenedorPedidosMesero{
         height: 567px;

@@ -33,3 +33,15 @@
     display: flex;
     flex-direction: row;
 }
+@mixin displayFlex($direccion){
+    display: flex;
+    flex-direction: $direccion;
+}
+@mixin displayJustifyContent($justify){
+    display: flex;
+    justify-content: $justify;
+}
+@mixin fontPadding($fontsize, $padding){
+    font-size: $fontsize;
+    padding: $padding;
+}

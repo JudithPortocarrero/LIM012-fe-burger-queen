@@ -3,16 +3,15 @@
 .contenedorCards{
     width: 100%;
     @include flexDirection;
-    justify-content: space-around;
 }
 .cardEstadoPedido{
-    @include EstilosDeCard(50px, 40%, 447px, #FFFFFF, 24px);
+    @include EstilosDeCard(50px, 45%, 550px, #FFFFFF, 24px);
+    margin-left: 5%;
 }
 .contenedorCardEstadoPedido{
     width: 90%;
-    margin-left: 5%;
+    margin-left: 20px;
 }
-
 .btnEntregado{
     @include btnCambiarActualizacion(25px, 10px);
 }

@@ -1,7 +1,7 @@
 @import '../estilosCompartidos';
 
 .detallesEstadoCocina{
-    @include definirTamaños(100%, 280px);
+    @include definirTamaños(400px, 380px);
     margin: 0;
     overflow: scroll;
     @include tamanoLetra(15px);
@@ -23,7 +23,7 @@
 }
 @media screen and (min-width:1025px) {
     .detallesEstadoCocina{
-        height: 250px;
+        @include definirTamaños(300px, 250px);
         @include tamanoLetra(20px);
     }
     .titulosTabla, .descripcionTabla{
