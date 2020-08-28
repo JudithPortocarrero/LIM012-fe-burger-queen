@@ -1,0 +1,29 @@
+@import '../estilosCompartidos';
+
+.contenedorCards{
+    width: 100%;
+    @include flexDirection;
+    justify-content: space-around;
+}
+.cardEstadoPedido{
+    @include EstilosDeCard(50px, 40%, 447px, #FFFFFF, 24px);
+}
+.contenedorCardEstadoPedido{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.btnEntregado{
+    @include btnCambiarActualizacion(25px, 10px);
+}
+@media screen and (min-width:1025px) {
+    .cardEstadoPedido{
+        @include definirTamaños(35%, 390px);
+    }
+    .tituloNroOrden, .btnEntregado{
+        @include tamanoLetra(20px);
+    }
+    .tituloNroMesa{
+        @include tamanoLetra(17px);
+    }
+}

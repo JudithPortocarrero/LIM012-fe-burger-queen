@@ -1,7 +1,7 @@
 import React from 'react'
 import Botones from '../components/botones'
 import logo from '../images/logoBG.png'
-import './Page1.css'
+import './stylesPages/Page1.scss'
 
 const Pages1 = () => {
     return (
@@ -11,7 +11,7 @@ const Pages1 = () => {
             </div>
             <div className='contenedorBotones'>
                 <Botones tituloBonton='MESERO' referencia='/mesero/RealizarPedido'/>
-                <Botones tituloBonton='COCINERO' referencia='/cocinero'/>  
+                <Botones tituloBonton='COCINERO' referencia='/cocinero/EstadoCocinero'/>  
             </div>              
         </div>
     )
