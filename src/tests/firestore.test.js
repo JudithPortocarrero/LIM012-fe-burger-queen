@@ -121,13 +121,6 @@ import {
   actualizarEstadoCocina,
   actualizarEstadoServido,
   obtenerNumeroPedido,
-  obtenerPedidosMesero,
-  obtenerPedidosCocina,
-  obtenerPedidosHistorico,
-  obtenerCocinaHistorico,
-  productoPreparado,
-  productoServido,
-  obtenerMenu,
 } from '../firebase/firestore.js';
 
 describe('Crear Pedido', () => {
@@ -136,7 +129,7 @@ describe('Crear Pedido', () => {
       const callback = (orden) => {
         const result = orden.find(elemento => elemento.data().detalle === (nuevoPedido.detalle));
         console.log(result);
-        // expect(result.data().detalle).toBe(nuevoPedido.detalle);
+        expect(result.data().detalle).toBe(nuevoPedido.detalle);
       };
       obtenerPedido(callback);
   })});
@@ -148,7 +141,7 @@ describe('Actualizar Pedido', () => {
         const result = orden.find(elemento => elemento.data().cliente === (nuevoPedido.cliente));
         expect(result.data().detalle).toBe(nuevoPedido.detalle);
       };
-      obtenerPedido(callback)
+      obtenerPedido(callback);
     })
   })
 });

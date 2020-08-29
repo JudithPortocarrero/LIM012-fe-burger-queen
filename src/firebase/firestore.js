@@ -68,7 +68,6 @@ export const obtenerPedidosHistorico = (callback) => firebase.firestore().collec
 .onSnapshot((querySnapshot) => {
   const pedidos = [];
   querySnapshot.forEach((doc) => {
-    
     if(doc.data().flagentregadomesero === true){
       pedidos.push({ id : doc.id, ...doc.data() });
     }
