@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/LIM012-fe-burger-queen/static/css/main.50752941.chunk.css",
-    "main.js": "/LIM012-fe-burger-queen/static/js/main.ff951dce.chunk.js",
-    "main.js.map": "/LIM012-fe-burger-queen/static/js/main.ff951dce.chunk.js.map",
+    "main.js": "/LIM012-fe-burger-queen/static/js/main.05e8609f.chunk.js",
+    "main.js.map": "/LIM012-fe-burger-queen/static/js/main.05e8609f.chunk.js.map",
     "runtime-main.js": "/LIM012-fe-burger-queen/static/js/runtime-main.9e1cd89d.js",
     "runtime-main.js.map": "/LIM012-fe-burger-queen/static/js/runtime-main.9e1cd89d.js.map",
     "static/js/2.5411b868.chunk.js": "/LIM012-fe-burger-queen/static/js/2.5411b868.chunk.js",
     "static/js/2.5411b868.chunk.js.map": "/LIM012-fe-burger-queen/static/js/2.5411b868.chunk.js.map",
     "index.html": "/LIM012-fe-burger-queen/index.html",
-    "precache-manifest.1283f18035505c520fb483b6cfa9e8ae.js": "/LIM012-fe-burger-queen/precache-manifest.1283f18035505c520fb483b6cfa9e8ae.js",
+    "precache-manifest.e38a7abba90442b3065143d7b647d06e.js": "/LIM012-fe-burger-queen/precache-manifest.e38a7abba90442b3065143d7b647d06e.js",
     "service-worker.js": "/LIM012-fe-burger-queen/service-worker.js",
     "static/css/main.50752941.chunk.css.map": "/LIM012-fe-burger-queen/static/css/main.50752941.chunk.css.map",
     "static/js/2.5411b868.chunk.js.LICENSE.txt": "/LIM012-fe-burger-queen/static/js/2.5411b868.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.9e1cd89d.js",
     "static/js/2.5411b868.chunk.js",
     "static/css/main.50752941.chunk.css",
-    "static/js/main.ff951dce.chunk.js"
+    "static/js/main.05e8609f.chunk.js"
   ]
 }
