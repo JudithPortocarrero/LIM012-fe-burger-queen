@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import DetallePedido from "./DetallePedido";
 import {productoServido} from '../../firebase/firestore'
 import './ListaPedidos.scss';

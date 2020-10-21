@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React from "react";
 import { actualizarEstadoServido} from '../../firebase/firestore'
 import './DetallePedido.scss'
 
@@ -31,9 +31,3 @@ const DetallePedido = ({ detalle, idPedido , esHistorico }) => {
   );
 };
 export default DetallePedido;
-{/*
-<div>
-  {esHistorico =='false'  &&
-    <div primary="Servido"/>
-  }
-</div> */}

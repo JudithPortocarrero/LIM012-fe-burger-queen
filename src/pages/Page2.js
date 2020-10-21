@@ -89,7 +89,7 @@ const Page2 = () => {
         }
         const total =  precioTotal;
         setprecioTotal(total + producto[0].data.precioProducto);
-        setpedido([... pedido, obj]);
+        setpedido([...pedido, obj]);
     } 
 
     const enviarPedido = () => {

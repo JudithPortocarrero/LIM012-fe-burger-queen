@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import Cabecera from '../components/cabeceraMesero'
 import {obtenerPedidosMesero} from '../firebase/firestore'
 import ListaPedidos from '../components/pedidos/ListaPedidos'

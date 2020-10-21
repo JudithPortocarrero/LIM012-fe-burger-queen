@@ -13,7 +13,7 @@ const ListaHistorialMesero = ({ pedidos }) => {
                         <section>Nombre: {pedido.nombre}</section>
                     </div>
                     <DetalleHistorialMesero detalle={pedido.detalle}/>
-                    <div className ="precioTotal">TOTAL: {'          '+' S/'+ pedido.preciototal}</div>                  
+                    <div className ="precioTotal">TOTAL:          S/{pedido.preciototal}</div>                  
                 </div> 
             </div>
         ))}

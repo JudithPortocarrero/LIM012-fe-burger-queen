@@ -1,4 +1,5 @@
 import firebase from 'firebase/app';
+// eslint-disable-next-line no-unused-vars
 import db from '../conexionFirebase';
 
 export const crearPedido = (json) => {
@@ -14,7 +15,7 @@ export const obtenerPedido = (id) => {
 
 export const actualizarEstadoCocina = (idPedido, idDetalle) => obtenerPedido(idPedido).then((data) => {
     let pedido = data.data();
-    pedido.detalle.map( (prd) => {
+    pedido.detalle.map((prd) => {
       if(prd.id === idDetalle){
         prd.flagcocina = !prd.flagcocina;
       }

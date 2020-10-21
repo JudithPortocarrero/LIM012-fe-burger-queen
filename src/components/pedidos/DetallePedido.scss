@@ -23,7 +23,7 @@
 }
 @media screen and (min-width:1025px) {
     .detallesEstadoCocina{
-        @include definirTamaños(300px, 250px);
+        @include definirTamaños(430px, 250px);
         @include tamanoLetra(20px);
     }
     .titulosTabla, .descripcionTabla{
